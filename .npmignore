@@ -1,0 +1,11 @@
+src/
+tests/
+.github/
+.eslintrc.cjs
+.prettierrc
+tsconfig.json
+vitest.config.ts
+SPEC.md
+coverage/
+*.tsbuildinfo
+.DS_Store

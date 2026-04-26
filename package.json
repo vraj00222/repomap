@@ -1,0 +1,73 @@
+{
+  "name": "repomap-llm",
+  "version": "0.1.0",
+  "description": "Generate a stable REPOMAP.md context file for any codebase — maximizes LLM KV-cache hits across requests.",
+  "type": "module",
+  "bin": {
+    "repomap": "dist/cli.js",
+    "repomap-llm": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "llm",
+    "context",
+    "codebase",
+    "kv-cache",
+    "claude",
+    "cursor",
+    "ai",
+    "repomap",
+    "prompt-cache"
+  ],
+  "author": "vraj <vrajpatel00222@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/vraj00222/repomap#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vraj00222/repomap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vraj00222/repomap/issues"
+  },
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --dts --clean --shims",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src tests",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "chokidar": "^4.0.1",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "cosmiconfig": "^9.0.0",
+    "fast-glob": "^3.3.2",
+    "ora": "^8.1.0",
+    "simple-git": "^3.27.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitest/coverage-v8": "^2.1.1",
+    "eslint": "^8.57.0",
+    "execa": "^9.4.0",
+    "prettier": "^3.3.3",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  }
+}

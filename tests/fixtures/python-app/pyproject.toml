@@ -1,0 +1,4 @@
+[project]
+name = "demo-py-app"
+version = "0.1.0"
+description = "Sample Python app for repomap fixtures."

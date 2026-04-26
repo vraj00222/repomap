@@ -1,0 +1,6 @@
+{
+  "name": "demo-monorepo",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "description": "Sample monorepo fixture."
+}
